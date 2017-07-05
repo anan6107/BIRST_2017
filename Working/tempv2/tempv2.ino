@@ -35,4 +35,6 @@ void loop(void)
 
     Serial.print("Outhouse: ");
     Serial.println(sensor_outhouse.getTempCByIndex(0));
+
+    delay(2000);
 }

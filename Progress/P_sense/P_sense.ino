@@ -64,7 +64,7 @@ void loop() {
 //  Serial.println(altitude_delta); 
 
 
-  delay(1000);
+  delay(5000);
 
   }
   
