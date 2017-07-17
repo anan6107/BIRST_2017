@@ -37,34 +37,15 @@ void loop() {
   
   // Read pressure from the sensor in mbar.
   pressure_abs = sensor.getPressure(ADC_4096);
-  pressure_relative = sealevel(pressure_abs, base_altitude); //convert abs pressure with help of altitude into relative pressure   
-  altitude_delta = altitude(pressure_abs , pressure_baseline); //difference between input baseline reading and current - based on pressure
-    
-  // Report values via UART//
+  //pressure_relative = sealevel(pressure_abs, base_altitude); //convert abs pressure with help of altitude into relative pressure   
+  //altitude_delta = altitude(pressure_abs , pressure_baseline); //difference between input baseline reading and current - based on pressure
   
-  //  int count = 0;
-  //  Serial.print("Count: ");
-  //  Serial.println(count);
-  //  count ++;
+  double abs_pressure = pressure_abs/10;
 
-
-  Serial.print("Temperature C = ");
-  Serial.println(temperature_c);
-  
-  Serial.print("Temperature F = ");
-  Serial.println(temperature_f);
-  
   Serial.print("Pressure abs (mbar)= ");
-  Serial.println(pressure_abs);
-   
-  Serial.print("Pressure relative (mbar)= ");
-  Serial.println(pressure_relative); 
-  
-//  Serial.print("Altitude change (m) = ");
-//  Serial.println(altitude_delta); 
+  Serial.println(abs_pressure);
 
-
-  delay(5000);
+  delay(2000);
 
   }
   
